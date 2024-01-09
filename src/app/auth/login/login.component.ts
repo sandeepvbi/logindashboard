@@ -10,11 +10,7 @@ import { ServiceService } from 'src/app/share/service.service';
 })
 export class LoginComponent {
   userData:any;
-    constructor(
-      private formBuilder: FormBuilder,
-      private route: ActivatedRoute,
-      private router: Router,
-      private accountService: ServiceService
+    constructor(private formBuilder: FormBuilder,private route: ActivatedRoute,private router: Router,private accountService: ServiceService
   ) {}
   ngOnInit() {
     this.accountService.currentUserData.subscribe((userData: any) => (this.userData = userData));
@@ -24,7 +20,9 @@ export class LoginComponent {
     let msg = event.target.value;
     this.accountService.changeData(msg);
   }
-  login(data:any) {
-    this.accountService.changeData(data);
+  login() {
+    // this.router.navigateByUrl('https://coreui.io/demos/angular/4.2/free/#/dashboard');
+    window.location.href='https://coreui.io/demos/angular/4.2/free/#/dashboard'
+
   }
 }

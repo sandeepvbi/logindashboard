@@ -6,7 +6,7 @@
         <div class="auth-avatar">
           <img src="https://pluspng.com/img-png/user-png-icon-account-avatar-human-male-man-men-people-person-download-svg-download-png-edit-icon-512.png" alt="user" class="user-image">
         </div>
-        <form (submit)="login(userData)">
+        <form>
           <div class="form-group">
             <label for="email">Email : </label>
             <input type="text" name="email" class="form-control" placeholder="Email" [(ngModel)]="userData.email">
@@ -19,10 +19,10 @@
             </div>
           </div>
           <div class="text-center">
-            <input type="submit" class="btn btn-my" value="Login">
+            <button type="submit" type="button" class="btn btn-info" (click)="login()">Login</button>
           </div>
           <div class="text-center">
-            <button type="button"> Amazon service</button>
+            <button type="submit" type="button" class="btn btn-warning"> Amazon service</button>
           </div>
         </form>
         <div class="text-center sign-up ">

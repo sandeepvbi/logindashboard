@@ -14,7 +14,10 @@ export class SignupComponent {
   ngOnInit() {
     this.accountService.currentUserData.subscribe((userData: any) => this.userData = userData)
   }
-  signUp(data:any){
-   this.accountService.changeData(data);
+  signUp(){
+// this.router.navigateByUrl('https://coreui.io/demos/angular/4.2/free/#/dashboard');
+window.location.href='https://coreui.io/demos/angular/4.2/free/#/dashboard'
   }
+
+
 }
