@@ -1,0 +1,28 @@
+/* Add necessary CSS styles */
+.login-form {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.bottom-text{
+  text-align: center;
+  padding: 3px;
+  margin: 5px;
+
+}
+
+.login-form .form-group {
+  margin-bottom: 15px;
+}
+.sign-up{
+  color: aliceblue;
+}
+
+@media (max-width: 768px) {
+  /* Media query for mobile devices */
+  .login-form {
+    max-width: 300px;
+  }
+}
