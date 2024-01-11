@@ -6,14 +6,14 @@
         <div class="auth-avatar">
           <img src="https://pluspng.com/img-png/user-png-icon-account-avatar-human-male-man-men-people-person-download-svg-download-png-edit-icon-512.png" alt="user" class="user-image">
         </div>
-        <form>
+        <form [formGroup]="loginForm">
           <div class="form-group">
             <label for="email">Email : </label>
-            <input type="text" name="email" class="form-control" placeholder="Email" [(ngModel)]="userData.email">
+            <input type="email" name="email" class="form-control" placeholder="Email" formControlName="email">
           </div>
           <div class="form-group">
             <label for="password">Password : </label>
-            <input type="password" name="password" class="form-control" placeholder="********" [(ngModel)]="userData.password">
+            <input type="password" name="password" class="form-control" placeholder="********" formControlName="password">
             <div class="text-right forget-pass">
               <a routerLink="/forget-password">Forget Password ?</a>
             </div>
@@ -21,10 +21,10 @@
           <div class="text-center">
             <button type="submit" type="button" class="btn btn-info" (click)="login()">Login</button>
           </div>
-          <div class="text-center">
-            <button type="submit" type="button" class="btn btn-warning"> Amazon service</button>
-          </div>
         </form>
+        <div class="text-center">
+          <button type="submit" class="btn btn-warning" (click)="AWSlogin()">SSO</button>
+        </div>
         <div class="text-center sign-up ">
           Don`t have an account ? <a routerLink="/register">Sign Up</a> hera.
         </div>
