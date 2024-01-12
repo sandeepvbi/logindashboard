@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
 
   login(){
     this.http.post('http://localhost:5000/api/v1/user',this.loginForm.value).subscribe((res:any)=>{
-       if(res){
+       if(res.status == 200){
         console.log("login",res);
         window.location.href = 'https://coreui.io/demos/angular/4.2/free/#/dashboard'
        }
